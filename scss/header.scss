@@ -1,0 +1,186 @@
+@import "colors";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.header {
+
+    .header-top{
+        background-color: map-get($grey, background);
+        // margin: 0;
+        // padding: 0;
+        padding: 10px 15px; //fix
+
+        a {
+            font-weight: 700;
+            color: map-get($grey, text);
+      
+            &:hover {
+              color: darken(map-get($grey, text), 20%);
+            }
+        }        
+
+        .language-selector {
+            margin: 0;
+            display: flex;
+
+            li {
+                display: flex;
+                align-items: center;
+
+                a {
+                    display: inline-block;
+                    font-size: 12px;
+                    line-height: 15px;
+                    padding: 5px 7px;
+                    border-radius: 8px; 
+                }
+
+                &.active {
+                    a {
+                        background-color: map-get($accent, default);
+                        color: #fff;
+                    }                 
+                }
+            }
+        }
+
+        .header-phone-nomber {
+
+            a {
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+    }
+
+    .header-botoom {
+        padding: 13px 15px;
+
+        .header-logo-box {
+            display: flex;
+            align-items: center;
+
+            .header-logo {
+                display: inline-flex;
+                height: 32px;
+            }
+            
+            .header-page-title {
+                display: flex;
+                align-items: center;
+                font-size: 20px;
+                line-height: 1,5em;
+                font-weight: 400;
+                color: map-get($main, default);
+            
+                &::before {
+                  content: '';
+                  display: inline-block;
+                  margin: 0 4px;
+                  width: 12px;
+                  height: 26px;
+                  background: linear-gradient(105deg, transparent 45%, map-get($accent, default) 46%, map-get($accent, default) 61%, transparent 62%);
+                }
+            }
+        }    
+
+        .header-hamburher-menu { 
+
+            .header-menu {
+                @include hamburger;
+            }
+            
+            .header-menu-container {
+                cursor: pointer;
+                display: inline-flex;
+                padding: 12px;
+                border-radius: 8px;
+                margin: 0;
+
+                &:hover, &:active {
+                  background-color: map-get($grey, separator);
+                }
+            }
+
+            .header-submenu {
+                position: fixed;
+                bottom: 0;
+                left: 8px;
+                right: 8px;
+                display: none;
+            
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    margin: 0;
+                    background-color: #fff;
+                    border-radius: 12px 12px 0 0;
+                    padding: 64px 12px 12px;
+                
+                    li {
+                        
+                        a {
+                            display: block;
+                            background-color: map-get($grey, background);
+                            color: map-get($active, default);
+                            padding: 7px 0;
+                            font-size: 24px;
+                            font-weight: 700;
+                            border-radius: 12px;
+                            
+                            &:hover {
+                                background-color: map-get($grey, separator);
+                                color: map-get($active, default);
+                            }
+                    
+                            &.active {
+                                color: map-get($accent, default);
+                            }                       
+                        }
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: fixed;
+                    z-index: -1;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background-color: map-get($main, default);
+                    opacity: 0.7;
+                }
+            }
+            
+            input{
+                display: none;
+                
+                &:checked ~ .header-submenu {
+                    display: block;
+                }
+            }
+
+            .header-close-menu { 
+                position: absolute;
+                top: 12px;
+                right: 12px;
+                width: 32px;
+                height: 32px;
+                color: #EC6F5D;
+                cursor: pointer;
+                font-size: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+            }
+        }        
+    }
+}
