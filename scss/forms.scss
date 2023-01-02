@@ -1,0 +1,30 @@
+@import "colors";
+
+.is-invalid-input:not(:focus) {
+    background-color: transparent;
+}
+
+input:disabled {
+    color: map-get($grey, text);
+}
+
+.button {
+    white-space: nowrap;
+    box-shadow: 0px 0px 20px rgba(map-get($active, default), 0.5);
+    border-radius: 12px;
+
+    &.is-progress {
+        @extend .spinner;
+        background-color: map-get($grey, background-alt);
+        box-shadow: none;
+        span {
+            display: none;
+        }
+    }
+}
+
+//В другом scss "callout"
+.send-massege-form {
+    // @include callout-style(map-get($grey, background));
+    background-color: map-get($grey, background);
+}
