@@ -13,6 +13,10 @@ input:disabled {
     box-shadow: 0px 0px 20px rgba(map-get($active, default), 0.5);
     border-radius: 12px;
 
+    &:active {
+        background-color: map-get($active, active); 
+    }
+
     &.is-progress {
         @extend .spinner;
         background-color: map-get($grey, background-alt);

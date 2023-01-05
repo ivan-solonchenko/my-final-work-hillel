@@ -892,6 +892,7 @@ $input-radius: 8px;
 $input-background-disabled: map-get($grey, background-alt);
 
 $button-background: map-get($active, default);
+$button-background-hover: map-get($active, hover);
 $button-font-weight: 700;
 
 $button-sizes: (
