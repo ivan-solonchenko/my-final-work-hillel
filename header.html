@@ -10,42 +10,44 @@
 </head>
 <body>
     <div class="header">
-        <div class="header-top grid-x align-middle">
-            <div class="cell auto">
-                <ul class="language-selector no-bullet">
-                    <li><a href="#">УК</a></li>
-                    <li class="active"><a href="#">EN</a></li>
-                    <li><a href="#">IT</a></li>
-                </ul>
-            </div>
-            <div class="header-phone-nomber cell auto text-right">
-                <a href="tel:0800 211 927">0800 211 927</a>
-            </div>
+        <div class="header-top header-reducer">
+            <ul class="language-selector no-bullet">
+                <li><a href="#">УК</a></li>
+                <li class="active"><a href="#">EN</a></li>
+                <li><a href="#">IT</a></li>
+            </ul>
+            <div class="hide-for-small-only header-top-item header-address">Kyiv, Mechnikova str., 14/1</div>
+            <a class="header-top-item" href="tel:0800 211 927">0800 211 927</a>
+            <a href="https://facebook.com" class="hide-for-small-only header-top-item header-facebook-icon"><i class="fa-brands fa-facebook"></i></a>
         </div>
-        <div class="header-botoom grid-x align-middle">
-            <div class="header-logo-box cell auto">
+        <div class="header-bottom header-reducer">
+            <div class="header-logo-box">
                 <div class="header-logo">
-                    <img src="./icons/header-logo.svg" alt="header-logo">
+                    <img src="./icons/header-logo.svg" />
                     <span class="header-page-title">about us</span>
                 </div>
             </div>
-            <div class="header-hamburher-menu cell auto text-right">
-                <input type="checkbox" id="menu">
-                <label class="header-menu-container" for="menu">
-                    <div class="header-menu"></div>
-                </label>
-                <div class="header-submenu">
-                    <label class="header-close-menu" for="menu">
-                        <i class="fa-solid fa-xmark close"></i>
+        </div>
+        <div class="header-nav text-right medium-text-left header-reducer">
+            <div class="hamburger">
+                <input type="checkbox" id="menu" />
+                <div class="show-for-small-only">
+                    <label class="header-menu-container" for="menu">
+                        <div class="header-menu"></div>
                     </label>
-                    <ul class="text-center no-bullet">
-                        <li><a href="#">about us</a></li>
+                </div>
+                <label class="header-submenu show-for-medium hide-for-small-only" for="menu">
+                    <label class="header-close-menu show-for-small-only" for="menu">
+                        <i class="fa-solid fa-xmark"></i>
+                    </label>
+                    <ul class="text-center no-bullet align-left">
+                        <li><a href="#" class="active">about us</a></li>
                         <li><a href="#">послуги</a></li>
                         <li><a href="#">команда</a></li>
-                        <li><a href="#" class="active">публікації</a></li>
+                        <li><a href="#">публікації</a></li>
                         <li><a href="#">контакти</a></li>
                     </ul>
-                </div>
+                </label>
             </div>
         </div>
     </div>
