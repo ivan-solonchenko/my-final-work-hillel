@@ -67,7 +67,7 @@
       height: 32px;
   
       @include breakpoint(medium) {
-        height: initial;
+        height: 60px;
       }
     }
 

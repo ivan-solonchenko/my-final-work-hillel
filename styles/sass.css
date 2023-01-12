@@ -110,7 +110,7 @@ h1, .h1 {
 }
 @media print, screen and (min-width: 40em) {
   .header .header-logo {
-    height: initial;
+    height: 60px;
   }
 }
 .header .header-top {
