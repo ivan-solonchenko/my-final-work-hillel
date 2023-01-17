@@ -35,6 +35,10 @@
     }
     .header-facebook-icon {
       font-size: 24px;
+
+      i:hover {
+        color: map-get($accent, default);
+      }
     }
     .header-top-item {
       position: relative;
@@ -225,6 +229,11 @@
 
             &.active {
               border-bottom: 2px solid map-get($accent, default);
+              border-radius: 0;
+            }
+
+            &:hover {
+              border-bottom: 2px solid map-get($active, default);
               border-radius: 0;
             }
           }
