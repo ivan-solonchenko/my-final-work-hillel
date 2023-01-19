@@ -15,7 +15,7 @@
     [row3-start] "bottom bottom bottom" [row3-end];  
 
     @include breakpoint(medium) {
-      margin: 40px 45px 0;
+      padding: 40px 45px 0;
     } 
 
     @include breakpoint(large) {
@@ -23,7 +23,7 @@
       [row1-start] "middle top" [row1-end]
       [row2-start] "middle bottom" [row2-end];
       justify-content: space-between;
-      margin: 40px 45px 0;
+      padding: 40px 45px 0;
     }    
 
     .header-reducer {
@@ -36,10 +36,11 @@
     .header-facebook-icon {
       font-size: 24px;
 
-      i:hover {
+      .fa-facebook:hover {
         color: map-get($accent, default);
       }
     }
+
     .header-top-item {
       position: relative;
       padding-left: 12px;
@@ -110,6 +111,15 @@
           line-height: 15px;            
           border-radius: 8px;
           padding: 5px 7px;
+
+          &:hover {
+            background-color: map-get($grey, text);
+          }
+
+          // &:active {
+          //   background-color: map-get($accent, default);
+          //   color: #fff;
+          // }
         }
 
         &.active {
@@ -230,6 +240,10 @@
             &.active {
               border-bottom: 2px solid map-get($accent, default);
               border-radius: 0;
+
+              &:hover {
+                border-bottom: 2px solid map-get($accent, default);
+              }
             }
 
             &:hover {
@@ -294,7 +308,75 @@
       justify-content: space-around;
     }       
   }
-}
+
+
+
+  &.dark-version {
+    background-color: map-get($main, default);
+
+    .header-logo {
+      .header-page-title {
+        color: #fff;
+      }
+    }
+
+    .header-top {
+     background-color: map-get($main, default);
+     color: #fff; 
+ 
+     a {
+      color: #fff;
+
+        li {
+          &:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+          }
+        }
+      }
+    }
+
+    .header-nav {
+      
+      .header-menu {
+        @include hamburger(#fff, map-get($main, default));
+      }
+
+      ul {
+
+        @include breakpoint(medium) {
+          background-color: map-get($main, default);
+        }
+      }
+
+      li {
+        a {
+
+          @include breakpoint(medium) {
+            color: #fff;
+
+            &.active:hover {
+              color: map-get($accent, default);
+            }
+
+            &:hover {
+              color: #fff;
+              border-bottom: 2px solid #fff;
+            }
+
+            // &:active {
+            //   color: map-get($accent, default);
+            //   border-bottom: 2px solid map-get($accent, default);
+            // }
+          }
+        }
+      }
+    } 
+  }
+}    
+
+      
+
+
 
 
 
