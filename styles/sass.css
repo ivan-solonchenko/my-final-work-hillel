@@ -111,6 +111,9 @@ h1, .h1 {
   display: inline-flex;
   height: 32px;
 }
+.header .header-logo .header-logo-for-dark-version {
+  display: none;
+}
 @media print, screen and (min-width: 40em) {
   .header .header-logo {
     height: 60px;
@@ -339,6 +342,12 @@ h1, .h1 {
 }
 .header.dark-version .header-logo .header-page-title {
   color: #fff;
+}
+.header.dark-version .header-logo .header-logo-for-light-version {
+  display: none;
+}
+.header.dark-version .header-logo .header-logo-for-dark-version {
+  display: inline-block;
 }
 .header.dark-version .header-top {
   background-color: #323264;

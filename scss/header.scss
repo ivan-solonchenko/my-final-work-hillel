@@ -70,6 +70,10 @@
     .header-logo {
       display: inline-flex;
       height: 32px;
+      
+      .header-logo-for-dark-version {
+        display: none;
+      }
   
       @include breakpoint(medium) {
         height: 60px;
@@ -317,6 +321,15 @@
     .header-logo {
       .header-page-title {
         color: #fff;
+      }
+
+      .header-logo-for-light-version {
+        display: none;
+      }
+
+      
+      .header-logo-for-dark-version {
+        display: inline-block;
       }
     }
 
