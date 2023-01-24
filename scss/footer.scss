@@ -1,0 +1,150 @@
+@import "./colors.scss";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.footer {
+    padding: 0 30px 30px;
+
+    @include breakpoint(medium) {
+        padding: 0 60px 30px;
+    } 
+  
+    // @include breakpoint(large) {
+    //     padding: 32px 60px 30px 60px;
+    // } 
+
+    .footer-wrapper {
+        display: grid;
+        grid-template: 
+            [row1-start] "top top top" [row1-end]
+            [row2-start] "middle middle middle" [row2-end]
+            [row3-start] "bottom bottom bottom" [row3-end];
+        padding-top: 32px;   
+        border-top: 2px solid map-get($grey, separator); 
+        // padding: 32px 30px 30px;
+        text-decoration: none;
+        position: relative;
+    
+        @include breakpoint(medium) {
+            justify-content: center;
+        } 
+      
+        @include breakpoint(large) {
+            grid-template: 
+            [row1-start] "top bottom" [row1-end]
+            [row2-start] "middle 1fr" [row2-end];
+            justify-content: space-between;
+            padding-top: 32px;
+        }  
+        
+        a {
+            color: map-get($active, default); 
+            
+            &:hover {
+                color: (map-get($accent, default));
+            }
+        }
+    
+        .dot-separator {
+            @include breakpoint(medium) {
+                position: relative;
+                padding-left: 16px;
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    left: 0;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    background-color: map-get($grey, text);
+                }
+            }
+        }
+    
+        .footer-top {
+            grid-area: top;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+            margin: 0 57px;
+    
+            @include breakpoint(medium) {
+                display: flex;
+                flex-direction: row;
+                margin: 0;
+            } 
+    
+            .footer-top-address {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+            }
+    
+            .footer-location {
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 1px;
+                text-transform: uppercase;           
+            }
+        }
+    
+        .footer-bottom {
+            grid-area: middle;  
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center; 
+            margin-top: 21px;
+    
+            @include breakpoint(medium) {
+                flex-direction: row;
+                justify-content: center;
+            } 
+            
+            .fa-facebook {
+                    font-size: 38px;
+                    display: inherit;
+            }
+    
+            .footer-number {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;   
+                color: map-get($main, alt); 
+                
+                &:hover {
+                    color: darken(map-get($main, alt), 20%);
+                }
+            }
+    
+            .footer-email {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;            
+            }
+        }
+    
+        .copyright {
+            grid-area: bottom; 
+            margin-top: 30px;
+            text-align: center; 
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 20px;   
+            color: map-get($grey, text); 
+            
+            @include breakpoint(large) {
+                margin: 0; 
+            }
+        }
+    }
+}
