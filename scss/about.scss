@@ -1,0 +1,128 @@
+@import "./colors.scss";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main-content {
+
+    .content {
+        padding: 30px;
+
+        .title {
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;  
+        }
+
+        .main-text {
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 30px;
+            color: #000000;  
+            padding-top: 28px;          
+        }
+    }
+
+    .advantages {
+        padding: 0 30px 30px;  
+        position: relative;
+
+        .advantages-wrapper {
+            padding-left: 34px;
+            left: 0;
+            border-left: 4px solid map-get($grey, separator);            
+        }
+
+        .block {
+            &~.block {
+                margin-top: 40px;
+            }
+
+            .block-headline {
+                display: flex;
+                flex-direction: row;
+                gap: 8px;
+
+                p {
+                    font-weight: 700;
+                    font-size: 36px;
+                    line-height: 44px;
+                    background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
+                }
+            }
+
+            .block-description {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 20px;
+                color: #323264;
+            }
+        }
+    }
+
+    .promo-image {
+        margin: 0 auto;
+        object-fit: cover;
+  
+        img {
+            width: 100%;
+        }
+    }
+
+    .bottom-annotation {
+        padding: 0 30px;
+
+        p{
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;
+            background: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;           
+        }
+    }
+
+    .footer {
+        margin-top: 60px;
+        padding: 30px 60px;
+        background-color: map-get($grey, background);
+
+        .footer-top-label {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: map-get($main, default);            
+        }
+
+        .bottom-icons-row {
+            display: flex;//check
+            margin: 30px 0;
+        }
+
+        .carousel {
+            display: flex;
+            gap: 14px;
+            justify-content: center;
+    
+            img {
+              opacity: 0.2;
+    
+              &.active {
+                opacity: 1; 
+              }
+            }
+          }
+    }
+}
