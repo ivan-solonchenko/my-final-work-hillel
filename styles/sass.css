@@ -585,10 +585,21 @@ h1, .h1 {
 .main-content .content {
   padding: 30px;
 }
+@media print, screen and (min-width: 48em) {
+  .main-content .content {
+    padding: 60px 60px 30px;
+  }
+}
 .main-content .content .title {
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .content .title {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 .main-content .content .main-text {
   font-weight: 400;
@@ -600,6 +611,11 @@ h1, .h1 {
 .main-content .advantages {
   padding: 0 30px 30px;
   position: relative;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .advantages {
+    padding: 0 60px 60px;
+  }
 }
 .main-content .advantages .advantages-wrapper {
   padding-left: 34px;
@@ -640,6 +656,11 @@ h1, .h1 {
 .main-content .bottom-annotation {
   padding: 0 30px;
 }
+@media print, screen and (min-width: 48em) {
+  .main-content .bottom-annotation {
+    padding: 0 60px;
+  }
+}
 .main-content .bottom-annotation p {
   font-weight: 700;
   font-size: 30px;
@@ -649,6 +670,12 @@ h1, .h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .bottom-annotation p {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 .main-content .footer {
   margin-top: 60px;
@@ -666,6 +693,42 @@ h1, .h1 {
 .main-content .footer .bottom-icons-row {
   display: flex;
   margin: 30px 0;
+  list-style: none;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .footer .bottom-icons-row {
+    gap: 40px;
+  }
+}
+.main-content .footer .bottom-icons-row li {
+  width: 255px;
+  height: 90px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  position: relative;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .footer .bottom-icons-row li {
+    width: 132px;
+    height: 90px;
+  }
+}
+.main-content .footer .bottom-icons-row li img {
+  max-height: 40px;
+  height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+.main-content .footer .bottom-icons-row li ~ li {
+  display: none;
+}
+@media print, screen and (min-width: 48em) {
+  .main-content .footer .bottom-icons-row li ~ li {
+    display: block;
+  }
 }
 .main-content .footer .carousel {
   display: flex;

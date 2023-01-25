@@ -12,10 +12,19 @@
     .content {
         padding: 30px;
 
+        @include breakpoint(medium) {
+            padding: 60px 60px 30px;
+        } 
+
         .title {
             font-weight: 700;
             font-size: 30px;
-            line-height: 37px;  
+            line-height: 37px; 
+            
+            @include breakpoint(medium) {
+                font-size: 38px;
+                line-height: 46px;
+            }             
         }
 
         .main-text {
@@ -30,6 +39,10 @@
     .advantages {
         padding: 0 30px 30px;  
         position: relative;
+
+        @include breakpoint(medium) {
+            padding: 0 60px 60px;
+        } 
 
         .advantages-wrapper {
             padding-left: 34px;
@@ -80,6 +93,10 @@
     .bottom-annotation {
         padding: 0 30px;
 
+        @include breakpoint(medium) {
+            padding: 0 60px;
+        }   
+
         p{
             font-weight: 700;
             font-size: 30px;
@@ -88,7 +105,12 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-fill-color: transparent;           
+            text-fill-color: transparent;   
+            
+            @include breakpoint(medium) {
+                font-size: 38px;
+                line-height: 46px;
+            }  
         }
     }
 
@@ -107,8 +129,45 @@
         }
 
         .bottom-icons-row {
-            display: flex;//check
+            display: flex;
             margin: 30px 0;
+            list-style: none;
+
+            @include breakpoint(medium) {
+                gap: 40px;
+            } 
+
+            li {
+                width: 255px;
+                height: 90px;
+                background: #FFFFFF;
+                border-radius: 12px;
+                position: relative;
+
+                @include breakpoint(medium) {
+                    width: 132px;
+                    height: 90px;
+                } 
+
+                img {
+                    max-height: 40px;
+                    height: 100%;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    margin-right: -50%;
+                    transform: translate(-50%, -50%)
+                }
+
+
+                &~li {
+                    display: none;
+
+                    @include breakpoint(medium) {
+                        display: block;
+                    } 
+                }
+            }
         }
 
         .carousel {
@@ -121,8 +180,9 @@
     
               &.active {
                 opacity: 1; 
-              }
+                }
             }
-          }
+        }
     }
 }
+

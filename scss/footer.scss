@@ -14,9 +14,6 @@
         padding: 0 60px 30px;
     } 
   
-    // @include breakpoint(large) {
-    //     padding: 32px 60px 30px 60px;
-    // } 
 
     .footer-wrapper {
         display: grid;
@@ -26,7 +23,6 @@
             [row3-start] "bottom bottom bottom" [row3-end];
         padding-top: 32px;   
         border-top: 2px solid map-get($grey, separator); 
-        // padding: 32px 30px 30px;
         text-decoration: none;
         position: relative;
     
