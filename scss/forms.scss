@@ -30,5 +30,7 @@ input:disabled {
 //В другом scss "callout"
 .send-massege-form {
     // @include callout-style(map-get($grey, background));
+    padding: 30px;
+    border-radius: 12px;
     background-color: map-get($grey, background);
 }

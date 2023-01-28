@@ -1,0 +1,122 @@
+@import "./colors.scss";
+@import "../node_modules/foundation-sites/scss/foundation.scss";
+
+.contact-main-content {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @include breakpoint(medium) {
+        padding: 60px;
+        gap: 60px;
+    }
+
+    @include breakpoint(large) {
+        flex-direction: row;
+    }
+
+    @include breakpoint(xlarge) {
+        padding: 60px 180px;
+    }
+
+    @include breakpoint(xxlarge) {
+        padding: 60px 280px;
+    }
+    
+    .main-content-reducer {
+        width: 100%;
+
+        .address {
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 30px;  
+            color: map-get($main, default);       
+        }
+
+        .bottom-line-separator {
+            border-bottom: 4px solid map-get($grey, separator);  
+            padding-bottom: 30px;
+        }
+
+        .contact-information {
+            text-decoration: none;
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 21px;
+            line-height: 30px;            
+
+            .phone-number {
+                display: block;                   
+                color: map-get($main, alt); 
+                
+                &:hover {
+                    color: darken(map-get($main, alt), 20%);
+                }
+            }
+
+            .email {
+                display: block; 
+                margin-top: 15px;
+                color: map-get($active, default); 
+
+                &:hover {
+                    color: darken(map-get($active, default), 20%);
+                }
+            }
+        }
+
+        .facebook {
+            margin-top: 30px;
+            color: map-get($active, default);
+
+            &>a {
+                color: map-get($active, default);
+            }
+
+            &:hover a {
+                color: map-get($accent, default);
+            }
+
+            &:hover i {
+                color: map-get($accent, default);
+            }
+
+
+            .fa-facebook {
+                font-size: 38px; 
+            }
+
+            .fb-page {
+                display: inline-block;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 1px; 
+                text-transform: uppercase;            
+            }
+        }
+    }
+
+    .send-massege-form {
+        width: 100%;
+
+        h1 {
+            font-size: 30px;
+        }
+        
+        h3 {
+            margin-top: 30px;
+            color: map-get($grey, text);
+        }
+
+        .phone-number {
+            margin-top: 15px;
+        }
+
+        .button {
+            margin-top: 30px;  
+        }
+    }
+
+}

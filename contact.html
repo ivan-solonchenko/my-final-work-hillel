@@ -6,20 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="./styles/sass.css">
+    <script src="https://kit.fontawesome.com/676e17c4b8.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
-    <div class="send-massege-form">
-        <form>
-            <h1>We would like to help you</h1>
-            <input type="text" name="name" placeholder="Name">
-            <textarea placeholder="Massage" rows="3"></textarea>
-            <h3>How to answer you?</h3>
-            <input type="tel" name="phone" placeholder="Phone number">
-            <input type="email" placeholder="Email">
-            <button type="button" class="button expanded">Send massage</button>
-        </form>
+    <div class="contact-main-content">
+        <div class="main-content-reducer">
+            <div class="address bottom-line-separator">Kyiv,<br>Mechnikova str, 14</div>
+            <div class="contact-information bottom-line-separator">
+                <a class="phone-number" href="tel:0800 211 927">0800 211 927</a>
+                <a class="email" href="mailto:contact@forstudy.space">contact@forstudy.space</a>
+            </div>
+            <div class="facebook">
+                <a href="https://facebook.com"><i class="fa-brands fa-facebook"></i></a>
+                <a class="fb-page" href="#">Our page <br> on facebook</a>
+            </div>
+        </div>
+        <div class="send-massege-form">
+            <form>
+                <h1>We would like to help you</h1>
+                <input type="text" name="name" placeholder="Name">
+                <textarea placeholder="Massage" rows="3"></textarea>
+                <h3>How to answer you?</h3>
+                <input class="phone-number" type="tel" name="phone" placeholder="Phone number">
+                <input type="email" placeholder="Email">
+                <button type="button" class="button expanded">Send massage</button>
+            </form>
+        </div>
     </div>
-
 </body>
 </html>
