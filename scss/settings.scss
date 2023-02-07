@@ -353,11 +353,11 @@ $callout-link-tint: 30%;
 $card-background: $white;
 $card-font-color: $body-font-color;
 $card-divider-background: $light-gray;
-$card-border: 1px solid $light-gray;
+$card-border: none;
 $card-shadow: none;
-$card-border-radius: $global-radius;
-$card-padding: $global-padding;
-$card-margin-bottom: $global-margin;
+$card-border-radius: 8px;
+$card-padding: 30px;
+$card-margin-bottom: 30px;
 
 // 15. Close Button
 // ----------------
@@ -782,17 +782,17 @@ $slider-radius: $global-radius;
 // 49. Switch
 // ----------
 
-$switch-background: $medium-gray;
+$switch-background: map-get($grey, Separator);
 $switch-background-active: $primary-color;
 $switch-height: 2rem;
 $switch-height-tiny: 1.5rem;
 $switch-height-small: 1.75rem;
 $switch-height-large: 2.5rem;
-$switch-radius: $global-radius;
+$switch-radius: 12px;
 $switch-margin: $global-margin;
 $switch-paddle-background: $white;
 $switch-paddle-offset: 0.25rem;
-$switch-paddle-radius: $global-radius;
+$switch-paddle-radius: 10px;
 $switch-paddle-transition: all 0.25s ease-out;
 $switch-opacity-disabled: 0.5;
 $switch-cursor-disabled: not-allowed;
