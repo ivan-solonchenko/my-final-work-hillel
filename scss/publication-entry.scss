@@ -1,0 +1,163 @@
+.publications-entry-main-content {
+
+    .main-content {
+        padding: 30px;
+        min-width: 315px;
+
+        .img-container {
+            height: 300px;
+
+            img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: 12px;
+            }
+        }
+
+        h3 {
+            margin-top: 30px;
+            margin-bottom: 0;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: map-get($main, default);           
+        }
+
+        .date {
+            margin-top: 15px;           
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: map-get($grey, text);           
+        }
+
+        .vertical-line-separator {
+            padding-bottom: 30px; 
+            border-bottom: 4px solid map-get($grey, separator); 
+        }
+
+        .main-text {
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #000000;
+        }
+
+        .title {
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;  
+        }
+
+        .sub-title {
+            margin-top: 30px;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;            
+        }
+
+        ol {
+          li {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #000000;            
+          }  
+        }
+
+        .img-wrapper {
+            margin-top: 30px;
+        }
+
+        .text-under-img {
+            margin-top: 15px;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            color: map-get($grey, text);          
+        }
+
+        .main-text-another-margin {
+            margin-top: 15px;
+        }
+
+        .row-icons {
+            margin-top: 30px;
+
+            img {
+                padding: 9px;  
+                background-color: map-get($grey, background);  
+                border-radius: 12px; 
+
+                & ~ img {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        padding: 30px 30px 0;
+        min-width: 315px;
+        margin-top: 60px;
+        background-color: map-get($grey, background);
+        border-radius: 12px 12px 0px 0px;
+
+        .publications {
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;  
+            color: map-get($active, default); 
+            text-transform: uppercase;  
+            
+            // &::before {
+            //     content: ;
+            // }
+        }
+
+        .title {
+            margin: 5px 0 0;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;            
+        }
+
+        .grid-container {
+            margin-top: 30px;
+        }
+
+        .title-news {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 20px;
+            color: map-get($active, default);            
+        }
+
+        .date {
+            margin-top: 15px;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 15px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: map-get($grey, text);           
+        }
+
+        .description {
+            margin-top: 15px;
+            padding-top: 15px;  
+            border-top: 4px solid map-get($grey, separator);               
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 22px;
+            color: #000000;                
+        }
+    }
+
+}
