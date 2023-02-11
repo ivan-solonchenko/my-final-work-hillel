@@ -1,3 +1,9 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 @import "./typography.scss";
 @import "../node_modules/foundation-sites/scss/foundation.scss";
 @import "./settings";
