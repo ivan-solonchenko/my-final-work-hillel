@@ -1373,28 +1373,32 @@ h1, .h1 {
 .publications-entry-main-content .main-content .row-icons img ~ img {
   margin-left: 10px;
 }
-.publications-entry-main-content .footer {
+.publications-entry-main-content .main-content .row-icons img:hover {
+  background-color: #EDEDF7;
+}
+.publications-entry-main-content .footer-wrap {
   background-color: #F5F5FA;
 }
-.publications-entry-main-content .footer .footer-top {
+.publications-entry-main-content .footer-wrap .footer-top {
   padding: 30px 30px 0;
   min-width: 315px;
   margin-top: 30px;
   border-radius: 12px 12px 0px 0px;
 }
 @media print, screen and (min-width: 48em) {
-  .publications-entry-main-content .footer .footer-top {
+  .publications-entry-main-content .footer-wrap .footer-top {
     padding: 30px 60px 0;
   }
 }
 @media screen and (min-width: 120em) {
-  .publications-entry-main-content .footer .footer-top {
+  .publications-entry-main-content .footer-wrap .footer-top {
     padding: 30px 160px 0;
     max-width: 1920px;
     margin: 0 auto;
   }
 }
-.publications-entry-main-content .footer .footer-top .publications {
+.publications-entry-main-content .footer-wrap .footer-top .publications-block .publications {
+  margin-right: 5.5px;
   font-weight: 700;
   font-size: 14px;
   line-height: 17px;
@@ -1402,33 +1406,33 @@ h1, .h1 {
   color: #24A3FF;
   text-transform: uppercase;
 }
-.publications-entry-main-content .footer .footer-top .publications::after {
-  content: url("../icons/right-arrow.svg");
-}
-.publications-entry-main-content .footer .footer-top .card .img-container {
+.publications-entry-main-content .footer-wrap .footer-top .card .img-container {
   height: 200px;
 }
-.publications-entry-main-content .footer .footer-top .card .img-container img {
+.publications-entry-main-content .footer-wrap .footer-top .card .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-.publications-entry-main-content .footer .footer-top .card .title {
+.publications-entry-main-content .footer-wrap .footer-top .card .title {
   margin: 5px 0 0;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
 }
-.publications-entry-main-content .footer .footer-top .card .grid-container {
+.publications-entry-main-content .footer-wrap .footer-top .card .grid-container {
   margin-top: 30px;
 }
-.publications-entry-main-content .footer .footer-top .card .title-news {
+.publications-entry-main-content .footer-wrap .footer-top .card .title-news {
   font-weight: 700;
   font-size: 16px;
   line-height: 20px;
   color: #24A3FF;
 }
-.publications-entry-main-content .footer .footer-top .card .date {
+.publications-entry-main-content .footer-wrap .footer-top .card .title-news:hover {
+  color: #F0145A;
+}
+.publications-entry-main-content .footer-wrap .footer-top .card .date {
   margin-top: 15px;
   font-weight: 700;
   font-size: 12px;
@@ -1437,7 +1441,7 @@ h1, .h1 {
   text-transform: uppercase;
   color: #B3B3BA;
 }
-.publications-entry-main-content .footer .footer-top .card .description {
+.publications-entry-main-content .footer-wrap .footer-top .card .description {
   margin-top: 15px;
   padding-top: 15px;
   border-top: 4px solid #E6E6F0;
