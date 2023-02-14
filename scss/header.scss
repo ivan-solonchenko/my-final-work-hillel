@@ -2,9 +2,9 @@
 @import "../node_modules/foundation-sites/scss/foundation.scss";
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 .header {
@@ -29,10 +29,12 @@
     .header-reducer {
       padding: 10px 15px;
     }
+
     .header-address {
       font-weight: 400;
       font-size: 16px;
     }
+
     .header-facebook-icon {
       font-size: 24px;
 
@@ -69,29 +71,33 @@
     
     .header-logo {
       display: inline-flex;
-      height: 32px;
+
+      img {
+        height: 32px;
+
+        @include breakpoint(medium) {
+          height: 60px;
+        }
+      }
       
       .header-logo-for-dark-version {
         display: none;
       }
-  
-      @include breakpoint(medium) {
-        height: 60px;
-      }
     }
 
   .header-top {
-      grid-area: top;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background-color: map-get($grey, background);
-      color: map-get($grey, text);
-      @include breakpoint(medium) {
-        justify-content: left;
-        background-color: transparent;
-        list-style: disc;
-      }      
+    grid-area: top;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: map-get($grey, background);
+    color: map-get($grey, text);
+
+    @include breakpoint(medium) {
+      justify-content: left;
+      background-color: transparent;
+      list-style: disc;
+    }      
 
     a {
       font-weight: 700;
@@ -117,13 +123,8 @@
           padding: 5px 7px;
 
           &:hover {
-            background-color: map-get($grey, text);
+            background-color: map-get($grey, background);
           }
-
-          // &:active {
-          //   background-color: map-get($accent, default);
-          //   color: #fff;
-          // }
         }
 
         &.active {
@@ -169,6 +170,7 @@
 
       @include breakpoint(medium) {
         font-size: 36px;
+        
         &::before {
           width: 21px;
           height: 47px;
@@ -185,8 +187,9 @@
   }
 
   .hamburger {
+
     .header-menu {
-      @include hamburger;
+      @include hamburger(map-get($main, default), map-get($main, default));
     }
 
     .header-menu-container {
@@ -195,7 +198,7 @@
       padding: 12px;
       border-radius: 8px;
 
-      &:hover, &:active {
+      &:hover {
         background-color: map-get($grey, separator);
       }
     }
@@ -274,7 +277,7 @@
         position: static;
         &::before {
           content: none;
-        }
+      }
 
         ul {
           flex-direction: row;
@@ -319,6 +322,15 @@
     background-color: map-get($main, default);
 
     .header-logo {
+
+      img {
+        height: 32px;
+
+        @include breakpoint(medium) {
+          height: 60px;
+        }
+      }
+
       .header-page-title {
         color: #fff;
       }
@@ -375,11 +387,6 @@
               color: #fff;
               border-bottom: 2px solid #fff;
             }
-
-            // &:active {
-            //   color: map-get($accent, default);
-            //   border-bottom: 2px solid map-get($accent, default);
-            // }
           }
         }
       }

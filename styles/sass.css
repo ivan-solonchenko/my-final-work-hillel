@@ -115,15 +115,17 @@ h1, .h1 {
 }
 .header .header-logo {
   display: inline-flex;
+}
+.header .header-logo img {
   height: 32px;
+}
+@media print, screen and (min-width: 48em) {
+  .header .header-logo img {
+    height: 60px;
+  }
 }
 .header .header-logo .header-logo-for-dark-version {
   display: none;
-}
-@media print, screen and (min-width: 48em) {
-  .header .header-logo {
-    height: 60px;
-  }
 }
 .header .header-top {
   grid-area: top;
@@ -162,7 +164,7 @@ h1, .h1 {
   padding: 5px 7px;
 }
 .header .header-top .language-selector li a:hover {
-  background-color: #B3B3BA;
+  background-color: #F5F5FA;
 }
 .header .header-top .language-selector li.active a {
   background-color: #F0145A;
@@ -228,13 +230,13 @@ h1, .h1 {
   display: block;
   width: 100%;
   height: 2px;
-  background: #0a0a0a;
-  box-shadow: 0 7px 0 #0a0a0a, 0 14px 0 #0a0a0a;
+  background: #323264;
+  box-shadow: 0 7px 0 #323264, 0 14px 0 #323264;
   content: "";
 }
 .header .hamburger .header-menu:hover::after {
-  background: #8a8a8a;
-  box-shadow: 0 7px 0 #8a8a8a, 0 14px 0 #8a8a8a;
+  background: #323264;
+  box-shadow: 0 7px 0 #323264, 0 14px 0 #323264;
 }
 .header .hamburger .header-menu-container {
   cursor: pointer;
@@ -242,7 +244,7 @@ h1, .h1 {
   padding: 12px;
   border-radius: 8px;
 }
-.header .hamburger .header-menu-container:hover, .header .hamburger .header-menu-container:active {
+.header .hamburger .header-menu-container:hover {
   background-color: #E6E6F0;
 }
 .header .hamburger .header-submenu {
@@ -345,6 +347,14 @@ h1, .h1 {
 }
 .header.dark-version {
   background-color: #323264;
+}
+.header.dark-version .header-logo img {
+  height: 32px;
+}
+@media print, screen and (min-width: 48em) {
+  .header.dark-version .header-logo img {
+    height: 60px;
+  }
 }
 .header.dark-version .header-logo .header-page-title {
   color: #fff;
