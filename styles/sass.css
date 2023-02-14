@@ -929,6 +929,7 @@ h1, .h1 {
 }
 
 .team-main-content {
+  min-width: 375px;
   padding: 30px 30px 60px;
 }
 @media print, screen and (min-width: 48em) {
@@ -1007,7 +1008,7 @@ h1, .h1 {
   color: #B3B3BA;
 }
 .team-main-content .team-persons .team-person .team-person-description .bg-button {
-  display: inherit;
+  display: block;
   width: 32px;
   height: 32px;
   background-color: #F5F5FA;
@@ -1023,23 +1024,23 @@ h1, .h1 {
   stroke: red;
 }
 
-.team-person-information {
+.team-personal-information {
   min-width: 375px;
   width: 100%;
   padding: 30px;
 }
 @media print, screen and (min-width: 48em) {
-  .team-person-information {
+  .team-personal-information {
     padding: 60px;
   }
 }
 @media screen and (min-width: 90em) {
-  .team-person-information {
+  .team-personal-information {
     padding: 60px 180px;
   }
 }
 @media screen and (min-width: 120em) {
-  .team-person-information {
+  .team-personal-information {
     padding: 60px 280px;
     max-width: 1920px;
     width: 100%;
@@ -1047,11 +1048,11 @@ h1, .h1 {
   }
 }
 @media print, screen and (min-width: 64em) {
-  .team-person-information .wrapper {
+  .team-personal-information .wrapper {
     position: relative;
     padding-left: 360px;
   }
-  .team-person-information .wrapper::before {
+  .team-personal-information .wrapper::before {
     content: " ";
     display: block;
     height: 375px;
@@ -1066,16 +1067,16 @@ h1, .h1 {
   }
 }
 @media screen and (min-width: 90em) {
-  .team-person-information .wrapper {
+  .team-personal-information .wrapper {
     position: relative;
     padding-left: 460px;
   }
-  .team-person-information .wrapper::before {
+  .team-personal-information .wrapper::before {
     height: 500px;
     width: 400px;
   }
 }
-.team-person-information .wrapper .preview {
+.team-personal-information .wrapper .preview {
   padding-bottom: 30px;
   border-bottom: 4px solid #E6E6F0;
   display: flex;
@@ -1083,33 +1084,33 @@ h1, .h1 {
   align-items: center;
 }
 @media print, screen and (min-width: 48em) {
-  .team-person-information .wrapper .preview {
+  .team-personal-information .wrapper .preview {
     flex-direction: row;
     gap: 30px;
   }
 }
-.team-person-information .wrapper .preview .img-container {
+.team-personal-information .wrapper .preview .img-container {
   height: 375px;
   width: 315px;
 }
 @media print, screen and (min-width: 48em) {
-  .team-person-information .wrapper .preview .img-container {
+  .team-personal-information .wrapper .preview .img-container {
     height: 375px;
     width: 300px;
   }
 }
-.team-person-information .wrapper .preview .img-container img {
+.team-personal-information .wrapper .preview .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 12px;
 }
-.team-person-information .wrapper .preview .short-information {
+.team-personal-information .wrapper .preview .short-information {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.team-person-information .wrapper .preview .short-information .title {
+.team-personal-information .wrapper .preview .short-information .title {
   margin-top: 30px;
   margin-bottom: 0;
   font-weight: 700;
@@ -1117,34 +1118,34 @@ h1, .h1 {
   line-height: 46px;
 }
 @media print, screen and (min-width: 48em) {
-  .team-person-information .wrapper .preview .short-information .title {
+  .team-personal-information .wrapper .preview .short-information .title {
     margin: 0;
   }
 }
-.team-person-information .wrapper .preview .short-information .line-items {
+.team-personal-information .wrapper .preview .short-information .line-items {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 15px;
 }
 @media screen and (min-width: 90em) {
-  .team-person-information .wrapper .preview .short-information .line-items {
+  .team-personal-information .wrapper .preview .short-information .line-items {
     flex-direction: row;
     margin-top: 15px;
   }
 }
-.team-person-information .wrapper .preview .short-information .line-items .job-title {
+.team-personal-information .wrapper .preview .short-information .line-items .job-title {
   font-weight: 400;
   font-size: 14px;
   line-height: 22px;
   color: #B3B3BA;
 }
 @media screen and (min-width: 90em) {
-  .team-person-information .wrapper .preview .short-information .line-items .job-title {
+  .team-personal-information .wrapper .preview .short-information .line-items .job-title {
     margin: 0;
   }
 }
-.team-person-information .wrapper .preview .short-information .line-items .link {
+.team-personal-information .wrapper .preview .short-information .line-items .link {
   display: block;
   margin-top: 10px;
   font-weight: 400;
@@ -1153,13 +1154,13 @@ h1, .h1 {
   color: #24A3FF;
 }
 @media screen and (min-width: 90em) {
-  .team-person-information .wrapper .preview .short-information .line-items .dot-separator-for-xlarge {
+  .team-personal-information .wrapper .preview .short-information .line-items .dot-separator-for-xlarge {
     margin: 0;
     margin-left: 10px;
     padding-left: 16px;
     position: relative;
   }
-  .team-person-information .wrapper .preview .short-information .line-items .dot-separator-for-xlarge::before {
+  .team-personal-information .wrapper .preview .short-information .line-items .dot-separator-for-xlarge::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1171,16 +1172,16 @@ h1, .h1 {
     background-color: #E6E6F0;
   }
 }
-.team-person-information .wrapper .main-content {
+.team-personal-information .wrapper .main-content {
   padding-top: 15px;
 }
-.team-person-information .wrapper .main-content .main-content-text {
+.team-personal-information .wrapper .main-content .main-content-text {
   margin-top: 15px;
   font-weight: 400;
   font-size: 16px;
   line-height: 26px;
 }
-.team-person-information .wrapper .main-content h3 {
+.team-personal-information .wrapper .main-content h3 {
   margin-top: 30px;
   font-weight: 700;
   font-size: 14px;
