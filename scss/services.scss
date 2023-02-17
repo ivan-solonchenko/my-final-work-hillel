@@ -1,0 +1,75 @@
+.services-main-content {
+
+    .services-wrapper {
+        padding: 30px;
+        border-radius: 0px 0px 12px 12px;
+        background: map-get($gradient, super-soft);
+    }
+
+    .services-section {
+
+        .services-section-item {
+            margin-bottom: 30px;
+        }
+
+        .services-section-title {
+            width: 100%;
+            font-weight: 700;
+            font-size: 30px;
+            line-height: 37px;  
+            margin-bottom: 30px;          
+        }
+
+        .services-section-item-title {
+            margin: 30px 0 0;
+            font-weight: 700;
+            font-size: 22px;
+            line-height: 27px;
+            color: map-get($active, default);  
+        }
+
+        .services-section-paragraph {
+            margin-top: 15px;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #FFFFFF;            
+        }
+    }
+
+    .partner-companies-section {
+        position: relative;
+        margin-top: 80px;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            height: 10px;
+            left: 20px;
+            right: 20px;
+            background-color: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: -70px;
+            height: 10px;
+            left: 40px;
+            right: 40px;
+            background-color: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+        }
+
+        .partner-companies-title {
+            margin-bottom: 30px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            letter-spacing: 1px;     
+            color: map-get($main, default);       
+        }
+    }
+}

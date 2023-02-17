@@ -1462,6 +1462,68 @@ h1, .h1 {
   color: #000000;
 }
 
+.services-main-content .services-wrapper {
+  padding: 30px;
+  border-radius: 0px 0px 12px 12px;
+  background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
+}
+.services-main-content .services-section .services-section-item {
+  margin-bottom: 30px;
+}
+.services-main-content .services-section .services-section-title {
+  width: 100%;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+  margin-bottom: 30px;
+}
+.services-main-content .services-section .services-section-item-title {
+  margin: 30px 0 0;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  color: #24A3FF;
+}
+.services-main-content .services-section .services-section-paragraph {
+  margin-top: 15px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 26px;
+  color: #FFFFFF;
+}
+.services-main-content .partner-companies-section {
+  position: relative;
+  margin-top: 80px;
+}
+.services-main-content .partner-companies-section::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  height: 10px;
+  left: 20px;
+  right: 20px;
+  background-color: #CACADB;
+  border-radius: 0px 0px 12px 12px;
+}
+.services-main-content .partner-companies-section::after {
+  content: "";
+  position: absolute;
+  top: -70px;
+  height: 10px;
+  left: 40px;
+  right: 40px;
+  background-color: #E7E7F2;
+  border-radius: 0px 0px 12px 12px;
+}
+.services-main-content .partner-companies-section .partner-companies-title {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 1px;
+  color: #323264;
+}
+
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
 html {
   line-height: 1.15;
