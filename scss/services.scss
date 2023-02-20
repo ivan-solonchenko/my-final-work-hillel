@@ -1,31 +1,64 @@
 .services-main-content {
-
-    .services-wrapper {
-        padding: 30px;
-        border-radius: 0px 0px 12px 12px;
-        background: map-get($gradient, super-soft);
-    }
+    max-width: 1920px;
+    margin: 0 auto;
 
     .services-section {
+        padding: 30px 30px 60px;
+        border-radius: 0px 0px 12px 12px;
+        background: map-get($gradient, super-soft);
 
-        .services-section-item {
+        @include breakpoint (medium) {
+            padding: 60px; 
+        }
+
+        @include breakpoint (xxlarge) {
+            padding: 60px 160px; 
+        }
+
+        .services-section-items {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-gap: 30px;
+
+            @include breakpoint (medium) {
+                grid-template-columns: 1fr 1fr;
+                grid-gap: 60px;
+            }
+
+            @include breakpoint (large) {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .services-section-item-icon {
+            display: block;
             margin-bottom: 30px;
         }
 
         .services-section-title {
+            margin-bottom: 30px;  
             width: 100%;
             font-weight: 700;
             font-size: 30px;
-            line-height: 37px;  
-            margin-bottom: 30px;          
+            line-height: 37px;   
+            
+            @include breakpoint (medium) {
+                margin-bottom: 60px;
+                font-size: 38px;
+                line-height: 46px;
+            }
         }
 
         .services-section-item-title {
-            margin: 30px 0 0;
+            // margin: 30px 0 0;
             font-weight: 700;
             font-size: 22px;
             line-height: 27px;
-            color: map-get($active, default);  
+            color: map-get($active, default); 
+            
+            &:hover {
+                color: map-get($accent, default);
+            }
         }
 
         .services-section-paragraph {
@@ -40,6 +73,10 @@
     .partner-companies-section {
         position: relative;
         margin-top: 80px;
+
+        @include breakpoint (xxlarge) {
+            padding: 0 100px 60px; 
+        }
 
         &::before {
             content: '';
@@ -70,6 +107,31 @@
             line-height: 17px;
             letter-spacing: 1px;     
             color: map-get($main, default);       
+        }
+
+        .partner-companies-container {
+
+            @include breakpoint (medium) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+
+            @include breakpoint (large) {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+
+            @include breakpoint (xxlarge) {
+                border-radius: 12px;
+                overflow: hidden;
+            }
+        }
+
+        .companies-img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 120px;
         }
     }
 }

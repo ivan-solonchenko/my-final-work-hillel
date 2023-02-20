@@ -1462,27 +1462,67 @@ h1, .h1 {
   color: #000000;
 }
 
-.services-main-content .services-wrapper {
-  padding: 30px;
+.services-main-content {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.services-main-content .services-section {
+  padding: 30px 30px 60px;
   border-radius: 0px 0px 12px 12px;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
 }
-.services-main-content .services-section .services-section-item {
+@media print, screen and (min-width: 48em) {
+  .services-main-content .services-section {
+    padding: 60px;
+  }
+}
+@media screen and (min-width: 120em) {
+  .services-main-content .services-section {
+    padding: 60px 160px;
+  }
+}
+.services-main-content .services-section .services-section-items {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+}
+@media print, screen and (min-width: 48em) {
+  .services-main-content .services-section .services-section-items {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 60px;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .services-main-content .services-section .services-section-items {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+.services-main-content .services-section .services-section-item-icon {
+  display: block;
   margin-bottom: 30px;
 }
 .services-main-content .services-section .services-section-title {
+  margin-bottom: 30px;
   width: 100%;
   font-weight: 700;
   font-size: 30px;
   line-height: 37px;
-  margin-bottom: 30px;
+}
+@media print, screen and (min-width: 48em) {
+  .services-main-content .services-section .services-section-title {
+    margin-bottom: 60px;
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 .services-main-content .services-section .services-section-item-title {
-  margin: 30px 0 0;
   font-weight: 700;
   font-size: 22px;
   line-height: 27px;
   color: #24A3FF;
+}
+.services-main-content .services-section .services-section-item-title:hover {
+  color: #F0145A;
 }
 .services-main-content .services-section .services-section-paragraph {
   margin-top: 15px;
@@ -1494,6 +1534,11 @@ h1, .h1 {
 .services-main-content .partner-companies-section {
   position: relative;
   margin-top: 80px;
+}
+@media screen and (min-width: 120em) {
+  .services-main-content .partner-companies-section {
+    padding: 0 100px 60px;
+  }
 }
 .services-main-content .partner-companies-section::before {
   content: "";
@@ -1522,6 +1567,30 @@ h1, .h1 {
   line-height: 17px;
   letter-spacing: 1px;
   color: #323264;
+}
+@media print, screen and (min-width: 48em) {
+  .services-main-content .partner-companies-section .partner-companies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .services-main-content .partner-companies-section .partner-companies-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+@media screen and (min-width: 120em) {
+  .services-main-content .partner-companies-section .partner-companies-container {
+    border-radius: 12px;
+    overflow: hidden;
+  }
+}
+.services-main-content .partner-companies-section .companies-img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
