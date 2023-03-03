@@ -1,137 +1,139 @@
 .services-main-content {
     max-width: 1920px;
+    min-width: 375px;
     margin: 0 auto;
+}
 
-    .services-section {
-        padding: 30px 30px 60px;
-        border-radius: 0px 0px 12px 12px;
-        background: map-get($gradient, super-soft);
+.services-section {
+    padding: 30px 30px 60px;
+    border-radius: 0px 0px 12px 12px;
+    background: map-get($gradient, super-soft);
+
+    @include breakpoint (medium) {
+        padding: 60px; 
+    }
+
+    @include breakpoint (xxlarge) {
+        padding: 60px 160px; 
+    }
+
+    .services-section-items {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 30px;
 
         @include breakpoint (medium) {
-            padding: 60px; 
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 60px;
         }
 
-        @include breakpoint (xxlarge) {
-            padding: 60px 160px; 
-        }
-
-        .services-section-items {
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-gap: 30px;
-
-            @include breakpoint (medium) {
-                grid-template-columns: 1fr 1fr;
-                grid-gap: 60px;
-            }
-
-            @include breakpoint (large) {
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-        }
-
-        .services-section-item-icon {
-            display: block;
-            margin-bottom: 30px;
-        }
-
-        .services-section-title {
-            margin-bottom: 30px;  
-            width: 100%;
-            font-weight: 700;
-            font-size: 30px;
-            line-height: 37px;   
-            
-            @include breakpoint (medium) {
-                margin-bottom: 60px;
-                font-size: 38px;
-                line-height: 46px;
-            }
-        }
-
-        .services-section-item-title {
-            font-weight: 700;
-            font-size: 22px;
-            line-height: 27px;
-            color: map-get($active, default); 
-            
-            &:hover {
-                color: map-get($accent, default);
-            }
-        }
-
-        .services-section-paragraph {
-            margin-top: 15px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 26px;
-            color: #FFFFFF;            
+        @include breakpoint (large) {
+            grid-template-columns: 1fr 1fr 1fr;
         }
     }
 
-    .partner-companies-section {
-        position: relative;
-        margin-top: 80px;
+    .services-section-item-icon {
+        display: block;
+        margin-bottom: 30px;
+    }
 
-        @include breakpoint (xxlarge) {
-            padding: 0 100px 60px; 
+    .services-section-title {
+        margin-bottom: 30px;  
+        width: 100%;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 37px;   
+        
+        @include breakpoint (medium) {
+            margin-bottom: 60px;
+            font-size: 38px;
+            line-height: 46px;
         }
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            height: 10px;
-            left: 20px;
-            right: 20px;
-            background-color: #CACADB;
-            border-radius: 0px 0px 12px 12px;
+    .services-section-item-title {
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 27px;
+        color: map-get($active, default); 
+        
+        &:hover {
+            color: map-get($accent, default);
         }
+    }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: -70px;
-            height: 10px;
-            left: 40px;
-            right: 40px;
-            background-color: #E7E7F2;
-            border-radius: 0px 0px 12px 12px;
-        }
-
-        .partner-companies-title {
-            margin-bottom: 30px;
-            font-weight: 700;
-            font-size: 14px;
-            line-height: 17px;
-            letter-spacing: 1px;     
-            color: map-get($main, default);       
-        }
-
-        .partner-companies-container {
-
-            @include breakpoint (medium) {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-            }
-
-            @include breakpoint (large) {
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-            }
-
-            @include breakpoint (xxlarge) {
-                border-radius: 12px;
-                overflow: hidden;
-            }
-        }
-
-        .companies-img-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 120px;
-        }
+    .services-section-paragraph {
+        margin-top: 15px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: #FFFFFF;            
     }
 }
+
+.partner-companies-section {
+    position: relative;
+    margin-top: 80px;
+
+    @include breakpoint (xxlarge) {
+        padding: 0 100px 60px; 
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        height: 10px;
+        left: 20px;
+        right: 20px;
+        background-color: #CACADB;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: -70px;
+        height: 10px;
+        left: 40px;
+        right: 40px;
+        background-color: #E7E7F2;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    .partner-companies-title {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;     
+        color: map-get($main, default);       
+    }
+
+    .partner-companies-container {
+
+        @include breakpoint (medium) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        @include breakpoint (large) {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+        @include breakpoint (xxlarge) {
+            border-radius: 12px;
+            overflow: hidden;
+        }
+    }
+
+    .companies-img-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+    }
+}
+
 

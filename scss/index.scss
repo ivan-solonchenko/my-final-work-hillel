@@ -1,8 +1,7 @@
 .home-page {
-    background: map-get($gradient, super-soft);
-    position: relative;
-    z-index: 0;
     min-width: 375px;
+    max-width: 1920px;
+    margin: 0 auto;
 
     .header {
         position: fixed;
@@ -24,13 +23,20 @@
         }
     }
 
+    .dark-bg-color-section {
+        position: relative;
+        background: map-get($gradient, super-soft);
+        z-index: 0;
+        border-radius: 0px 0px 12px 12px;
+    }
+
     .home-page-main-content {
-        padding-top: 102px;
+        padding: 102px 30px 0;
     }
 
     .home-page-preview {
-        padding: 0 30px;
         position: relative;
+        padding-bottom: 30px;
 
         &::after {
             content: "";
@@ -47,6 +53,7 @@
 
         .home-page-title {
             margin-top: 129px;
+            margin-bottom: 0;
             font-weight: 700;
             font-size: 38px;
             line-height: 46px;
@@ -56,7 +63,8 @@
 
         .home-page-scroll {
             display: block;
-            margin: 159px auto 30px;
+            min-width: 100%;
+            margin: 159px auto 0;
 
             &:hover {
                 circle {
@@ -69,4 +77,170 @@
             }
         }
     }
+
+    .horizontal-menu {
+        margin-top: 30px;
+        display: flex;  
+        gap: 30px;
+        padding-bottom: 30px;
+        border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+
+        .horizontal-menu-item {
+            white-space: nowrap;
+            font-weight: 700;
+            font-size: 38px;
+            line-height: 46px;
+            color: map-get($grey, text);
+            cursor: pointer;
+
+            &.active {
+                background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                text-fill-color: transparent;                    
+            }
+        }
+    }
+
+    .legal-servises-section {
+        margin-top: 60px;
+
+        .legal-servises-section-title {
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 24px;
+            color: #FFFFFF;   
+        }
+
+        .legal-servises-section-text {
+            margin-top: 30px;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 30px;
+            color: #FFFFFF;            
+        }
+    }
+
+    .publications-block {
+        margin-bottom: 10px;
+    }
+
+    .home-page-team {
+        padding: 50px 30px 0;
+        background-color: #fff;
+        position: relative;
+        z-index: -1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            height: 10px;
+            left: 20px;
+            right: 20px;
+            background-color: #CACADB;
+            border-radius: 0px 0px 12px 12px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            height: 10px;
+            left: 40px;
+            right: 40px;
+            background-color: #E7E7F2;
+            border-radius: 0px 0px 12px 12px;
+        }
+        
+        .short-information {
+            border-radius: 12px;    
+            overflow: hidden;        
+          
+            .img-container {
+              height: 500px;
+              width: 315px;
+          
+              @include breakpoint (medium) {
+                // height: 375px;
+                // width: 300px;
+              }
+            
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+              }
+            } 
+        }
+
+        .text-container {
+            background: #F5F5FA;
+            padding: 30px 30px;
+        }
+
+        .short-information {
+
+            .short-information-title {
+                margin: 0;
+                font-size: 30px;
+                line-height: 37px;   
+                white-space: normal;       
+            }
+
+            .items {
+                margin-top: 30px;
+                color: map-get($grey, text);
+
+                .name {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 20px;                    
+                }
+
+                .position {
+                    font-weight: 400;
+                    margin-top: 6px;
+                    font-size: 14px;
+                    line-height: 22px;                    
+                }
+            }
+        }
+    }
+}
+
+.carousel-margin-top {
+    margin-top: 30px;
+} 
+
+.no-pseudo-elements {
+    &::before {
+        display: none;
+    }
+
+    &::after {
+        display: none;
+    }
+}
+
+.no-margin-top {
+    margin-top: 0 !important;
+}
+
+.index-companies-section {
+    margin-top: 30px;
+    position: relative;
+    z-index: -1;
+}
+
+.index-publications-section {
+    position: relative;
+    z-index: -1;
+    margin-top: 0;
+}
+
+.index-footer {
+    position: relative;
+    z-index: -1;
 }

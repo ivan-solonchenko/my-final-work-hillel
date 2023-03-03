@@ -79,121 +79,117 @@
             }
         }
     }
+}
 
-    .publications-section {
-        position: relative;
-        margin-top: 80px;
+.publications-section {
+    position: relative;
+    margin-top: 80px;
 
-        // @include breakpoint (xxlarge) {
-        //     padding: 0 100px 60px; 
-        // }
+    &::before {
+        content: '';
+        position: absolute;
+        top: -80px;
+        height: 10px;
+        left: 20px;
+        right: 20px;
+        background-color: #CACADB;
+        border-radius: 0px 0px 12px 12px;
+    }
 
-        &::before {
-            content: '';
-            position: absolute;
-            top: -80px;
-            height: 10px;
-            left: 20px;
-            right: 20px;
-            background-color: #CACADB;
-            border-radius: 0px 0px 12px 12px;
+    &::after {
+        content: '';
+        position: absolute;
+        top: -70px;
+        height: 10px;
+        left: 40px;
+        right: 40px;
+        background-color: #E7E7F2;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+    .footer-top {
+        padding: 30px 30px 0;
+        min-width: 315px;
+        margin-top: 30px;
+        border-radius: 12px 12px 0px 0px;
+        background: map-get($grey, background);
+
+        @include breakpoint (medium) {
+            padding: 30px 60px 0;   
         }
 
-        &::after {
-            content: '';
-            position: absolute;
-            top: -70px;
-            height: 10px;
-            left: 40px;
-            right: 40px;
-            background-color: #E7E7F2;
-            border-radius: 0px 0px 12px 12px;
+        @include breakpoint (xxlarge) {
+            padding: 30px 160px 0;   
+            max-width: 1920px;
+            margin: 0 auto;
         }
 
-        .footer-top {
-            padding: 30px 30px 0;
-            min-width: 315px;
-            margin-top: 30px;
-            border-radius: 12px 12px 0px 0px;
-            border-color: map-get($grey, background);
-    
-            @include breakpoint (medium) {
-                padding: 30px 60px 0;   
-            }
-    
-            @include breakpoint (xxlarge) {
-                padding: 30px 160px 0;   
-                max-width: 1920px;
-                margin: 0 auto;
-            }
-    
-            .publications-block {
+        .card {
 
-                .publications {
-                    margin-right: 5.5px;
-                    font-weight: 700;
-                    font-size: 14px;
-                    line-height: 17px;
-                    letter-spacing: 1px;  
-                    color: map-get($active, default); 
-                    text-transform: uppercase;  
+            .img-container {
+                height: 200px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
                 }
             }
     
-            .card {
+            .title {
+                margin: 5px 0 0;
+                font-weight: 700;
+                font-size: 30px;
+                line-height: 37px;            
+            }
     
-                .img-container {
-                    height: 200px;
+            .grid-container {
+                margin-top: 30px;
+            }
     
-                    img {
-                        width: 100%;
-                        height: 100%;
-                        object-fit: cover;
-                    }
-                }
-        
-                .title {
-                    margin: 5px 0 0;
-                    font-weight: 700;
-                    font-size: 30px;
-                    line-height: 37px;            
-                }
-        
-                .grid-container {
-                    margin-top: 30px;
-                }
-        
-                .title-news {
-                    font-weight: 700;
-                    font-size: 16px;
-                    line-height: 20px;
-                    color: map-get($active, default);     
-                    
-                    &:hover {
-                        color: map-get($accent, default);  
-                    }
-                }
-        
-                .date {
-                    margin-top: 15px;
-                    font-weight: 700;
-                    font-size: 12px;
-                    line-height: 15px;
-                    letter-spacing: 1px;
-                    text-transform: uppercase;
-                    color: map-get($grey, text);           
-                }
-        
-                .description {
-                    margin-top: 15px;
-                    padding-top: 15px;  
-                    border-top: 4px solid map-get($grey, separator);               
-                    font-weight: 400;
-                    font-size: 14px;
-                    line-height: 22px;
-                    color: #000000;                
+            .title-news {
+                font-weight: 700;
+                font-size: 16px;
+                line-height: 20px;
+                color: map-get($active, default);     
+                
+                &:hover {
+                    color: map-get($accent, default);  
                 }
             }
-        }        
+    
+            .date {
+                margin-top: 15px;
+                font-weight: 700;
+                font-size: 12px;
+                line-height: 15px;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                color: map-get($grey, text);           
+            }
+    
+            .description {
+                margin-top: 15px;
+                padding-top: 15px;  
+                border-top: 4px solid map-get($grey, separator);               
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 22px;
+                color: #000000;                
+            }
+        }
+    }        
+}
+
+.publications-block {
+
+    .publications {
+        margin-right: 5.5px;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 1px;  
+        color: map-get($active, default); 
+        text-transform: uppercase;  
     }
 }

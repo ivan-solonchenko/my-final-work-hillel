@@ -189,7 +189,7 @@
   .hamburger {
 
     .header-menu {
-      @include hamburger(map-get($main, default), map-get($main, default));
+      @include hamburger(map-get($main, default));
     }
 
     .header-menu-container {

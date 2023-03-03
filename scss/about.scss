@@ -235,18 +235,32 @@
             }
         }
 
-        .carousel {
-            display: flex;
-            gap: 14px;
-            justify-content: center;
+        // .carousel {
+        //     display: flex;
+        //     gap: 14px;
+        //     justify-content: center;
     
-            img {
-              opacity: 0.2;
+        //     img {
+        //       opacity: 0.2;
     
-              &.active {
-                opacity: 1; 
-                }
-            }
+        //       &.active {
+        //         opacity: 1; 
+        //         }
+        //     }
+        // }
+    }
+}
+
+.carousel {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+
+    img {
+      opacity: 0.2;
+
+      &.active {
+        opacity: 1; 
         }
     }
 }

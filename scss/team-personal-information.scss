@@ -50,112 +50,7 @@
         width: 400px;
       } 
     }
- 
-    
-    .preview {
-      padding-bottom: 30px;
-      border-bottom: 4px solid map-get($grey, separator);
-      display: flex;
-      flex-direction: column;
-      align-items: center;      
-  
-      @include breakpoint (medium) {
-        flex-direction: row;
-        gap: 30px;
-      }
-  
-      .img-container {
-        height: 375px;
-        width: 315px;
-    
-        @include breakpoint (medium) {
-          height: 375px;
-          width: 300px;
-        }
-      
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-          border-radius: 12px;
-        }
-      }    
-  
-      .short-information {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-  
-   
-        .title {
-          margin-top: 30px;
-          margin-bottom: 0;
-          font-weight: 700;
-          font-size: 38px;
-          line-height: 46px; 
-          
-          @include breakpoint (medium) {
-            margin: 0;
-          }
-        }
 
-        .line-items {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          margin-top: 15px;
-
-          @include breakpoint (xlarge) {
-            flex-direction: row;
-            margin-top: 15px;
-          }          
-
-          .job-title {
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 22px;
-            color: map-get($grey, text);    
-
-            @include breakpoint (xlarge) {
-              margin: 0;
-            } 
-          }
-        
-          .link {
-            display: block;
-            margin-top: 10px;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 20px;
-            color: map-get($active, default);  
-            
-
-          }  
-          
-          .dot-separator-for-xlarge {
-
-            @include breakpoint (xlarge) {
-              margin: 0;
-              margin-left: 10px;
-              padding-left: 16px;
-              position: relative;
-
-              &::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 0;
-                width: 6px;
-                height: 6px;
-                transform: translateY(-50%);
-                border-radius: 50%;
-                background-color: map-get($grey, separator);
-              }
-            } 
-          }
-        }
-      }
-    }
   
     .main-content {
       padding-top: 15px;
@@ -175,6 +70,111 @@
         letter-spacing: 1px; 
         text-transform: uppercase;  
         color: map-get($main, default);
+      }
+    }
+  }
+}
+
+.preview {
+  padding-bottom: 30px;
+  border-bottom: 4px solid map-get($grey, separator);
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+
+  @include breakpoint (medium) {
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  .img-container {
+    height: 375px;
+    width: 315px;
+
+    @include breakpoint (medium) {
+      height: 375px;
+      width: 300px;
+    }
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+  }    
+
+  .short-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+    .title {
+      margin-top: 30px;
+      margin-bottom: 0;
+      font-weight: 700;
+      font-size: 38px;
+      line-height: 46px; 
+      
+      @include breakpoint (medium) {
+        margin: 0;
+      }
+    }
+
+    .line-items {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 15px;
+
+      @include breakpoint (xlarge) {
+        flex-direction: row;
+        margin-top: 15px;
+      }          
+
+      .job-title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 22px;
+        color: map-get($grey, text);    
+
+        @include breakpoint (xlarge) {
+          margin: 0;
+        } 
+      }
+    
+      .link {
+        display: block;
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 20px;
+        color: map-get($active, default);  
+        
+
+      }  
+      
+      .dot-separator-for-xlarge {
+
+        @include breakpoint (xlarge) {
+          margin: 0;
+          margin-left: 10px;
+          padding-left: 16px;
+          position: relative;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 6px;
+            height: 6px;
+            transform: translateY(-50%);
+            border-radius: 50%;
+            background-color: map-get($grey, separator);
+          }
+        } 
       }
     }
   }
