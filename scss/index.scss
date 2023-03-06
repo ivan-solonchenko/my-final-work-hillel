@@ -20,6 +20,14 @@
                     background: transparent;
                 }
             }
+
+            .hamburger {
+                ul {
+                    @include breakpoint(medium) {
+                      background-color: transparent;
+                    }
+                }
+            }
         }
     }
 
@@ -32,6 +40,14 @@
 
     .home-page-main-content {
         padding: 102px 30px 0;
+
+        @include breakpoint (medium) {
+            padding: 212px 60px 0;  
+        }
+
+        @include breakpoint (large) {
+            padding: 132px 60px 0;  
+        }
     }
 
     .home-page-preview {
@@ -48,7 +64,19 @@
             background-size: contain;
             bottom: 0;
             left: calc(50% - 523.4px/2 + 0.2px);    
-            z-index: -1;        
+            z-index: -1;    
+            
+            @include breakpoint (medium) {
+                width: 893.28px;
+                height: 1024px;  
+                left: calc(50% - 893.28px/2 - 0.36px);
+            }
+
+            @include breakpoint (large) {
+                width: 669.96px;
+                height: 768px;
+                left: calc(50% - 669.96px/2 - 0.02px);
+            }
         }
 
         .home-page-title {
@@ -58,13 +86,29 @@
             font-size: 38px;
             line-height: 46px;
             color: #FFFFFF; 
-            z-index: 1;           
+            z-index: 1;    
+            
+            @include breakpoint (medium) {
+                margin-top: 417px;  
+            }
+
+            @include breakpoint (large) {
+                margin-top: 245px;  
+            }
         }
 
         .home-page-scroll {
             display: block;
             min-width: 100%;
             margin: 159px auto 0;
+
+            @include breakpoint (medium) {
+                margin-top: 269px;  
+            }
+
+            @include breakpoint (large) {
+                margin-top: 289px;  
+            }
 
             &:hover {
                 circle {
@@ -77,6 +121,7 @@
             }
         }
     }
+    
 
     .horizontal-menu {
         margin-top: 30px;
@@ -84,6 +129,10 @@
         gap: 30px;
         padding-bottom: 30px;
         border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+
+        @include breakpoint (medium) {
+            margin-top: 60px; 
+        }        
 
         .horizontal-menu-item {
             white-space: nowrap;
@@ -104,7 +153,11 @@
     }
 
     .legal-servises-section {
-        margin-top: 60px;
+        margin-top: 30px;
+
+        @include breakpoint (medium) {
+            margin-top: 60px; 
+        }    
 
         .legal-servises-section-title {
             font-weight: 700;
@@ -122,6 +175,10 @@
         }
     }
 
+    .services-section {
+        background: transparent;
+    }
+
     .publications-block {
         margin-bottom: 10px;
     }
@@ -131,6 +188,10 @@
         background-color: #fff;
         position: relative;
         z-index: -1;
+
+        @include breakpoint (medium) {
+            padding: 80px 60px 0;
+        }
 
         &::before {
             content: '';
@@ -163,8 +224,7 @@
               width: 315px;
           
               @include breakpoint (medium) {
-                // height: 375px;
-                // width: 300px;
+                width: 100%;
               }
             
               img {
@@ -186,7 +246,12 @@
                 margin: 0;
                 font-size: 30px;
                 line-height: 37px;   
-                white-space: normal;       
+                white-space: normal;    
+                
+                @include breakpoint (medium) {
+                    font-size: 38px;
+                    line-height: 46px;
+                }
             }
 
             .items {
@@ -229,7 +294,7 @@
 }
 
 .index-companies-section {
-    margin-top: 30px;
+    margin-top: 60px;
     position: relative;
     z-index: -1;
 }

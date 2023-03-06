@@ -1795,6 +1795,11 @@ h1, .h1 {
     background: transparent;
   }
 }
+@media print, screen and (min-width: 48em) {
+  .home-page .header.dark-version .hamburger ul {
+    background-color: transparent;
+  }
+}
 .home-page .dark-bg-color-section {
   position: relative;
   background: linear-gradient(228.57deg, #323264 11.93%, #323264 57.17%, #643E72 87.46%);
@@ -1803,6 +1808,16 @@ h1, .h1 {
 }
 .home-page .home-page-main-content {
   padding: 102px 30px 0;
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-main-content {
+    padding: 212px 60px 0;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-main-content {
+    padding: 132px 60px 0;
+  }
 }
 .home-page .home-page-preview {
   position: relative;
@@ -1820,6 +1835,20 @@ h1, .h1 {
   left: calc(50% - 261.7px + 0.2px);
   z-index: -1;
 }
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-preview::after {
+    width: 893.28px;
+    height: 1024px;
+    left: calc(50% - 446.64px - 0.36px);
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-preview::after {
+    width: 669.96px;
+    height: 768px;
+    left: calc(50% - 334.98px - 0.02px);
+  }
+}
 .home-page .home-page-preview .home-page-title {
   margin-top: 129px;
   margin-bottom: 0;
@@ -1829,10 +1858,30 @@ h1, .h1 {
   color: #FFFFFF;
   z-index: 1;
 }
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-preview .home-page-title {
+    margin-top: 417px;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-preview .home-page-title {
+    margin-top: 245px;
+  }
+}
 .home-page .home-page-preview .home-page-scroll {
   display: block;
   min-width: 100%;
   margin: 159px auto 0;
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-preview .home-page-scroll {
+    margin-top: 269px;
+  }
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-preview .home-page-scroll {
+    margin-top: 289px;
+  }
 }
 .home-page .home-page-preview .home-page-scroll:hover circle {
   stroke: #F0145A;
@@ -1846,6 +1895,11 @@ h1, .h1 {
   gap: 30px;
   padding-bottom: 30px;
   border-bottom: 4px solid rgba(255, 255, 255, 0.3);
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .horizontal-menu {
+    margin-top: 60px;
+  }
 }
 .home-page .horizontal-menu .horizontal-menu-item {
   white-space: nowrap;
@@ -1863,7 +1917,12 @@ h1, .h1 {
   text-fill-color: transparent;
 }
 .home-page .legal-servises-section {
-  margin-top: 60px;
+  margin-top: 30px;
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .legal-servises-section {
+    margin-top: 60px;
+  }
 }
 .home-page .legal-servises-section .legal-servises-section-title {
   font-weight: 700;
@@ -1878,6 +1937,9 @@ h1, .h1 {
   line-height: 30px;
   color: #FFFFFF;
 }
+.home-page .services-section {
+  background: transparent;
+}
 .home-page .publications-block {
   margin-bottom: 10px;
 }
@@ -1886,6 +1948,11 @@ h1, .h1 {
   background-color: #fff;
   position: relative;
   z-index: -1;
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-team {
+    padding: 80px 60px 0;
+  }
 }
 .home-page .home-page-team::before {
   content: "";
@@ -1915,6 +1982,11 @@ h1, .h1 {
   height: 500px;
   width: 315px;
 }
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-team .short-information .img-container {
+    width: 100%;
+  }
+}
 .home-page .home-page-team .short-information .img-container img {
   width: 100%;
   height: 100%;
@@ -1929,6 +2001,12 @@ h1, .h1 {
   font-size: 30px;
   line-height: 37px;
   white-space: normal;
+}
+@media print, screen and (min-width: 48em) {
+  .home-page .home-page-team .short-information .short-information-title {
+    font-size: 38px;
+    line-height: 46px;
+  }
 }
 .home-page .home-page-team .short-information .items {
   margin-top: 30px;
@@ -1962,7 +2040,7 @@ h1, .h1 {
 }
 
 .index-companies-section {
-  margin-top: 30px;
+  margin-top: 60px;
   position: relative;
   z-index: -1;
 }
