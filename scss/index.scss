@@ -1,9 +1,14 @@
 .home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-width: 375px;
     max-width: 1920px;
     margin: 0 auto;
 
     .header {
+        max-width: 1920px;
+        margin: 0 auto;
         position: fixed;
         top: 0;
         left: 0;
@@ -77,6 +82,12 @@
                 height: 768px;
                 left: calc(50% - 669.96px/2 - 0.02px);
             }
+
+            @include breakpoint (xxlarge) {
+                width: 872.34px;
+                height: 1000px;
+                left: calc(50% - 872.34px/2 + 0.17px);
+            }
         }
 
         .home-page-title {
@@ -93,7 +104,11 @@
             }
 
             @include breakpoint (large) {
-                margin-top: 245px;  
+                margin-top: 229px;  
+            }
+
+            @include breakpoint (xxlarge) {
+                margin-top: 345px;  
             }
         }
 
@@ -110,6 +125,10 @@
                 margin-top: 289px;  
             }
 
+            @include breakpoint (xxlarge) {
+                margin-top: 405px;  
+            }
+
             &:hover {
                 circle {
                     stroke: map-get($accent, default);
@@ -120,6 +139,22 @@
                 }
             }
         }
+    }
+
+    .horizontal-menu-wrapper {
+        @include breakpoint (large) {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        } 
+
+        @include breakpoint (xlarge) {
+            padding: 0 120px;
+        } 
+
+        @include breakpoint (xxlarge) {
+            padding: 0 220px;
+        } 
     }
     
 
@@ -132,7 +167,16 @@
 
         @include breakpoint (medium) {
             margin-top: 60px; 
-        }        
+        } 
+        
+        @include breakpoint (large) {
+            margin-bottom: 0;
+            padding: 0 60px 0 0;
+            display: flex;
+            flex-direction: column;
+            border-bottom: none;
+            border-right: 4px solid rgba(255, 255, 255, 0.3);
+        } 
 
         .horizontal-menu-item {
             white-space: nowrap;
@@ -141,6 +185,10 @@
             line-height: 46px;
             color: map-get($grey, text);
             cursor: pointer;
+
+            &:hover{
+                color: map-get($accent, default);
+            }
 
             &.active {
                 background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
@@ -155,15 +203,23 @@
     .legal-servises-section {
         margin-top: 30px;
 
+        @include breakpoint (large) {
+            padding: 0 0 0 60px;
+        } 
+
         @include breakpoint (medium) {
             margin-top: 60px; 
         }    
 
         .legal-servises-section-title {
             font-weight: 700;
-            font-size: 20px;
+            font-size: 30px;
             line-height: 24px;
-            color: #FFFFFF;   
+            color: #FFFFFF;
+            
+            @include breakpoint (large) {
+                margin-bottom: 0;
+            } 
         }
 
         .legal-servises-section-text {
@@ -181,6 +237,22 @@
 
     .publications-block {
         margin-bottom: 10px;
+
+        .right-arrow-hover {
+            display: none;
+        }
+
+        a:hover  {
+            color: map-get($accent, default);  
+        }
+
+        a:hover ~ .right-arrow-hover {
+            display: block;
+        }
+
+        a:hover ~ .right-arrow {
+            display: none;
+        }
     }
 
     .home-page-team {
@@ -191,6 +263,10 @@
 
         @include breakpoint (medium) {
             padding: 80px 60px 0;
+        }
+
+        @include breakpoint (xxlarge) {
+            padding: 80px 160px 0;
         }
 
         &::before {
@@ -215,16 +291,26 @@
             border-radius: 0px 0px 12px 12px;
         }
         
-        .short-information {
+        .page-team-information {
             border-radius: 12px;    
-            overflow: hidden;        
+            overflow: hidden;  
+            
+            @include breakpoint (large) {
+                display: flex;
+            }
           
             .img-container {
               height: 500px;
-              width: 315px;
-          
-              @include breakpoint (medium) {
-                width: 100%;
+              width: 100%;
+
+              @include breakpoint (large) {
+                min-width: 400px;
+                height: 533px;
+              }
+
+              @include breakpoint (xlarge) {
+                width: 400px;
+                height: 349px;
               }
             
               img {
@@ -308,4 +394,9 @@
 .index-footer {
     position: relative;
     z-index: -1;
+
+    @include breakpoint (xxlarge) {
+        padding-left: 160px;
+        padding-right: 160px;
+    }
 }

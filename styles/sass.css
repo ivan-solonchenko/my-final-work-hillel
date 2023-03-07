@@ -1773,11 +1773,16 @@ h1, .h1 {
 }
 
 .home-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-width: 375px;
   max-width: 1920px;
   margin: 0 auto;
 }
 .home-page .header {
+  max-width: 1920px;
+  margin: 0 auto;
   position: fixed;
   top: 0;
   left: 0;
@@ -1849,6 +1854,13 @@ h1, .h1 {
     left: calc(50% - 334.98px - 0.02px);
   }
 }
+@media screen and (min-width: 120em) {
+  .home-page .home-page-preview::after {
+    width: 872.34px;
+    height: 1000px;
+    left: calc(50% - 436.17px + 0.17px);
+  }
+}
 .home-page .home-page-preview .home-page-title {
   margin-top: 129px;
   margin-bottom: 0;
@@ -1865,7 +1877,12 @@ h1, .h1 {
 }
 @media print, screen and (min-width: 64em) {
   .home-page .home-page-preview .home-page-title {
-    margin-top: 245px;
+    margin-top: 229px;
+  }
+}
+@media screen and (min-width: 120em) {
+  .home-page .home-page-preview .home-page-title {
+    margin-top: 345px;
   }
 }
 .home-page .home-page-preview .home-page-scroll {
@@ -1883,11 +1900,33 @@ h1, .h1 {
     margin-top: 289px;
   }
 }
+@media screen and (min-width: 120em) {
+  .home-page .home-page-preview .home-page-scroll {
+    margin-top: 405px;
+  }
+}
 .home-page .home-page-preview .home-page-scroll:hover circle {
   stroke: #F0145A;
 }
 .home-page .home-page-preview .home-page-scroll:hover path {
   stroke: #F0145A;
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .horizontal-menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@media screen and (min-width: 90em) {
+  .home-page .horizontal-menu-wrapper {
+    padding: 0 120px;
+  }
+}
+@media screen and (min-width: 120em) {
+  .home-page .horizontal-menu-wrapper {
+    padding: 0 220px;
+  }
 }
 .home-page .horizontal-menu {
   margin-top: 30px;
@@ -1901,6 +1940,16 @@ h1, .h1 {
     margin-top: 60px;
   }
 }
+@media print, screen and (min-width: 64em) {
+  .home-page .horizontal-menu {
+    margin-bottom: 0;
+    padding: 0 60px 0 0;
+    display: flex;
+    flex-direction: column;
+    border-bottom: none;
+    border-right: 4px solid rgba(255, 255, 255, 0.3);
+  }
+}
 .home-page .horizontal-menu .horizontal-menu-item {
   white-space: nowrap;
   font-weight: 700;
@@ -1908,6 +1957,9 @@ h1, .h1 {
   line-height: 46px;
   color: #B3B3BA;
   cursor: pointer;
+}
+.home-page .horizontal-menu .horizontal-menu-item:hover {
+  color: #F0145A;
 }
 .home-page .horizontal-menu .horizontal-menu-item.active {
   background: linear-gradient(90.13deg, #EF8080 0.84%, #F0145A 99.96%);
@@ -1919,6 +1971,11 @@ h1, .h1 {
 .home-page .legal-servises-section {
   margin-top: 30px;
 }
+@media print, screen and (min-width: 64em) {
+  .home-page .legal-servises-section {
+    padding: 0 0 0 60px;
+  }
+}
 @media print, screen and (min-width: 48em) {
   .home-page .legal-servises-section {
     margin-top: 60px;
@@ -1926,9 +1983,14 @@ h1, .h1 {
 }
 .home-page .legal-servises-section .legal-servises-section-title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px;
   line-height: 24px;
   color: #FFFFFF;
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .legal-servises-section .legal-servises-section-title {
+    margin-bottom: 0;
+  }
 }
 .home-page .legal-servises-section .legal-servises-section-text {
   margin-top: 30px;
@@ -1943,6 +2005,18 @@ h1, .h1 {
 .home-page .publications-block {
   margin-bottom: 10px;
 }
+.home-page .publications-block .right-arrow-hover {
+  display: none;
+}
+.home-page .publications-block a:hover {
+  color: #F0145A;
+}
+.home-page .publications-block a:hover ~ .right-arrow-hover {
+  display: block;
+}
+.home-page .publications-block a:hover ~ .right-arrow {
+  display: none;
+}
 .home-page .home-page-team {
   padding: 50px 30px 0;
   background-color: #fff;
@@ -1952,6 +2026,11 @@ h1, .h1 {
 @media print, screen and (min-width: 48em) {
   .home-page .home-page-team {
     padding: 80px 60px 0;
+  }
+}
+@media screen and (min-width: 120em) {
+  .home-page .home-page-team {
+    padding: 80px 160px 0;
   }
 }
 .home-page .home-page-team::before {
@@ -1974,20 +2053,32 @@ h1, .h1 {
   background-color: #E7E7F2;
   border-radius: 0px 0px 12px 12px;
 }
-.home-page .home-page-team .short-information {
+.home-page .home-page-team .page-team-information {
   border-radius: 12px;
   overflow: hidden;
 }
-.home-page .home-page-team .short-information .img-container {
-  height: 500px;
-  width: 315px;
-}
-@media print, screen and (min-width: 48em) {
-  .home-page .home-page-team .short-information .img-container {
-    width: 100%;
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-team .page-team-information {
+    display: flex;
   }
 }
-.home-page .home-page-team .short-information .img-container img {
+.home-page .home-page-team .page-team-information .img-container {
+  height: 500px;
+  width: 100%;
+}
+@media print, screen and (min-width: 64em) {
+  .home-page .home-page-team .page-team-information .img-container {
+    min-width: 400px;
+    height: 533px;
+  }
+}
+@media screen and (min-width: 90em) {
+  .home-page .home-page-team .page-team-information .img-container {
+    width: 400px;
+    height: 349px;
+  }
+}
+.home-page .home-page-team .page-team-information .img-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -2054,6 +2145,12 @@ h1, .h1 {
 .index-footer {
   position: relative;
   z-index: -1;
+}
+@media screen and (min-width: 120em) {
+  .index-footer {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
 }
 
 /*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
